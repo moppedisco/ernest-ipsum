@@ -1,5 +1,0 @@
-Title: About Ernest
-
-----
-
-Text: this is an about page.

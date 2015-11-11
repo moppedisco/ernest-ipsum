@@ -7,7 +7,4 @@ password: >
 language: en
 role: admin
 history:
-  - about-ernest
-  - contact
-  - projects
-  - about
+  - home
