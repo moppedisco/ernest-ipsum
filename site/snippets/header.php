@@ -13,11 +13,11 @@
   <?php echo css('assets/css/main.css') ?>
 
 </head>
-<body>
-
-  <header class="header cf" role="banner">
+<body class="<?php echo $page->uid() ?>">
+<div class="wrapper">
+  <header class="header" role="banner">
+    <?php snippet('menu') ?>
     <a class="logo" href="<?php echo url() ?>">
       <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
     </a>
-    <?php snippet('menu') ?>
   </header>

@@ -2,8 +2,8 @@ Title: The Bullfighter
 
 ----
 
-Intro: 
+Intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus cupiditate, perferendis commodi vitae fugit aut, mollitia recusandae aperiam sed itaque neque magnam, iusto! Labore minus eius alias blanditiis esse ad.
 
 ----
 
-Text: 
+Text: (image: brand_fyi_bsfc_116472_sfm_000_2997_15_20140905_001_hd_768x432-16x9.jpg)

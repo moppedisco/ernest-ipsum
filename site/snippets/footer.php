@@ -4,11 +4,8 @@
       <?php echo $site->copyright()->kirbytext() ?>
     </div>
 
-    <div class="colophon">
-
-    </div>
-
   </footer>
+</div>
 
 <?php echo js('assets/js/vendor/jquery-1.11.3.min.js') ?>
 <?php echo js('assets/js/main.js') ?>

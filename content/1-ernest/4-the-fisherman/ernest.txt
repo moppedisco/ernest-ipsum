@@ -2,8 +2,8 @@ Title: The Fisherman
 
 ----
 
-Intro: 
+Intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus cupiditate, perferendis commodi vitae fugit aut, mollitia recusandae aperiam sed itaque neque magnam, iusto! Labore minus eius alias blanditiis esse ad.
 
 ----
 
-Text: 
+Text: (image: hemingway_custom-306846a306ec3ebc66407b25daf61d0975309c60-s300-c85.jpg)
