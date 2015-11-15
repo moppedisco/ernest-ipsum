@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Project
+title: Ernest
 pages: false
 files:
   sortable: true
@@ -8,12 +8,9 @@ fields:
   title:
     label: Title
     type:  text
-  year:
-    label: Year
+  intro:
+    label: Intro
     type:  text
   text:
     label: Text
     type:  textarea
-  tags:
-    label: Tags
-    type:  tags

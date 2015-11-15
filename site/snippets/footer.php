@@ -5,10 +5,12 @@
     </div>
 
     <div class="colophon">
-      <a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b>♥</b></a>
+
     </div>
 
   </footer>
 
+<?php echo js('assets/js/vendor/jquery-1.11.3.min.js') ?>
+<?php echo js('assets/js/main.js') ?>
 </body>
 </html>

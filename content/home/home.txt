@@ -2,4 +2,9 @@ Title: Home
 
 ----
 
-Text: Yay! If you are seeing this, the installation of Kirby worked. :)
+Text: 
+
+“There is nothing to writing. 
+All you have to do is sit 
+at the typewriter
+and bleed.”
