@@ -1,0 +1,10 @@
+# Custom
+._
+.idea
+.DS_Store
+
+# Ignore the node modules folder (created by 'npm install').
+node_modules
+
+# Ignore npm debugs
+npm-debug.log
