@@ -2,12 +2,16 @@ Title: The Hunter
 
 ----
 
-Text: (image: hemingway6.jpg)
+Text: 
+
+(image: hemingway6.jpg)
+
+The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there's huge variety of the state of the ice. 
+
+For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade. 
+
+So at some point this century the summers are on course to be clear of ice, opening up new shipping lanes, making it easier to access the region's oil and gas and possibly also altering the path of the jet stream that drives our weather. So the matter of when all this might happen is the subject of intense research.
 
 ----
 
 Intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus cupiditate, perferendis commodi vitae fugit aut, mollitia recusandae aperiam sed itaque neque magnam, iusto! Labore minus eius alias blanditiis esse ad.
-
-----
-
-Color: helloe

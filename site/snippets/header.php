@@ -13,7 +13,7 @@
   <?php echo css('assets/css/main.css') ?>
 
 </head>
-<body class="<?php echo $page->uid() ?>">
+<body class="template--<?php echo $page->template() ?> <?php echo $page->uid() ?>">
 <div class="wrapper">
   <header class="header" role="banner">
     <?php snippet('menu') ?>

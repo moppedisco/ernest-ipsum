@@ -4,9 +4,9 @@
 
     <div class="text">
       <h1><?php echo $page->title()->html() ?></h1>
+      <div class="intro"><?php echo $page->intro()->html() ?></div>
       <?php echo $page->text()->kirbytext() ?>
     </div>
-    asdasdas
 
   </main>
 
