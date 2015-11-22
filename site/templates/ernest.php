@@ -1,5 +1,9 @@
 <?php snippet('header') ?>
 
+  <?php if($prev = $page->prevVisible()): ?>
+  <a class="link--prev" href="<?php echo $prev->url() ?>">&larr;</a>
+  <?php endif ?>
+
   <main class="main" role="main">
 
     <div class="text">
@@ -9,5 +13,9 @@
     </div>
 
   </main>
+
+  <?php if($next = $page->nextVisible()): ?>
+  <a class="link--next" href="<?php echo $next->url() ?>">&rarr;</a>
+  <?php endif ?>
 
 <?php snippet('footer') ?>

@@ -33,6 +33,13 @@ html {
   background: #F96332;
   text-align: center;
 
+  .the-hunter & { background: $blue; }
+  .the-fisherman & { background: $red; }
+  .the-drinker & { background: $green; }
+  .the-bullfighter & { background: $purple; }
+  .the-lover & { background: $turquoise; }
+  .the-papa & { background: $yellow; }
+
   nav {
     float: right;
   }
@@ -57,6 +64,13 @@ html {
   padding: 60px 20px 20px;
   position: relative;
   font-style: italic;
+
+	.the-hunter & { color: $blue; }
+	.the-fisherman & { color: $red; }
+	.the-drinker & { color: $green; }
+	.the-bullfighter & { color: $purple; }
+	.the-lover & { color: $turquoise; }
+	.the-papa & { color: $yellow; }
 
   &:before,
   &:after {
@@ -147,8 +161,18 @@ html {
 
 .text {
 	position: relative;
-	padding-top: 450px;
+	padding-top: 350px;
 	margin-bottom: 80px;
+
+	h1 {
+		text-align: center;
+		.the-hunter & { color: $blue; }
+		.the-fisherman & { color: $red; }
+		.the-drinker & { color: $green; }
+		.the-bullfighter & { color: $purple; }
+		.the-lover & { color: $turquoise; }
+		.the-papa & { color: $yellow; }
+	}
 
 	p:nth-of-type(1) {
 		font-size: 28px;
@@ -159,13 +183,35 @@ html {
 		margin: 0;
 		position: absolute;
 		top: 100px;
+		left: 50%;
+		transform: translateX(-50%);
 
 		img {
-			width: 100%;
-			height: auto;
+			width: 200px;
+			height: 200px;
 			border-radius: 100%;
 		}
 	}
+}
+
+.link--prev,
+.link--next {
+	position: absolute;
+	top: 250px;
+	left: 40px;
+	text-decoration: none;
+	color: #aaa;
+	font-size: 44px;
+	opacity: 0.4;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.link--next {
+	left: auto;
+	right: 40px;
 }
 
 .footer {

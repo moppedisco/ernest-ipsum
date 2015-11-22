@@ -24,6 +24,18 @@ html {
 .header {
   background: #F96332;
   text-align: center; }
+  .the-hunter .header {
+    background: #4A90E2; }
+  .the-fisherman .header {
+    background: #D0021B; }
+  .the-drinker .header {
+    background: #7ED321; }
+  .the-bullfighter .header {
+    background: #BD10E0; }
+  .the-lover .header {
+    background: #50E3C2; }
+  .the-papa .header {
+    background: #F8E71C; }
   .header nav {
     float: right; }
   .header .logo {
@@ -44,6 +56,18 @@ html {
   padding: 60px 20px 20px;
   position: relative;
   font-style: italic; }
+  .the-hunter .intro {
+    color: #4A90E2; }
+  .the-fisherman .intro {
+    color: #D0021B; }
+  .the-drinker .intro {
+    color: #7ED321; }
+  .the-bullfighter .intro {
+    color: #BD10E0; }
+  .the-lover .intro {
+    color: #50E3C2; }
+  .the-papa .intro {
+    color: #F8E71C; }
   .intro:before, .intro:after {
     content: "";
     position: absolute;
@@ -124,19 +148,52 @@ html {
 
 .text {
   position: relative;
-  padding-top: 450px;
+  padding-top: 350px;
   margin-bottom: 80px; }
+  .text h1 {
+    text-align: center; }
+    .the-hunter .text h1 {
+      color: #4A90E2; }
+    .the-fisherman .text h1 {
+      color: #D0021B; }
+    .the-drinker .text h1 {
+      color: #7ED321; }
+    .the-bullfighter .text h1 {
+      color: #BD10E0; }
+    .the-lover .text h1 {
+      color: #50E3C2; }
+    .the-papa .text h1 {
+      color: #F8E71C; }
   .text p:nth-of-type(1) {
     font-size: 28px;
     line-height: 1.5; }
   .text figure {
     margin: 0;
     position: absolute;
-    top: 100px; }
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%); }
     .text figure img {
-      width: 100%;
-      height: auto;
+      width: 200px;
+      height: 200px;
       border-radius: 100%; }
+
+.link--prev,
+.link--next {
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 44px;
+  opacity: 0.4; }
+  .link--prev:hover,
+  .link--next:hover {
+    opacity: 1; }
+
+.link--next {
+  left: auto;
+  right: 40px; }
 
 .footer {
   text-align: center; }
