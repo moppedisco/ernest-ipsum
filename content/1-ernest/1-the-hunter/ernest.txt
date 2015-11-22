@@ -7,3 +7,7 @@ Text: (image: hemingway6.jpg)
 ----
 
 Intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus cupiditate, perferendis commodi vitae fugit aut, mollitia recusandae aperiam sed itaque neque magnam, iusto! Labore minus eius alias blanditiis esse ad.
+
+----
+
+Color: helloe

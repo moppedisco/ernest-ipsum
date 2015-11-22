@@ -24,12 +24,10 @@ html {
 .header {
   background: #F96332;
   text-align: center; }
-
-.header nav {
-  float: right; }
-
-.header .logo {
-  display: inline-block; }
+  .header nav {
+    float: right; }
+  .header .logo {
+    display: inline-block; }
 
 .submenu {
   display: none; }
@@ -46,21 +44,18 @@ html {
   padding: 60px 20px 20px;
   position: relative;
   font-style: italic; }
-
-.intro:before,
-.intro:after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: -20px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #50E3C2; }
-
-.intro:after {
-  top: 40px;
-  left: -40px;
-  border: 1px solid #BD10E0; }
+  .intro:before, .intro:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #50E3C2; }
+  .intro:after {
+    top: 40px;
+    left: -40px;
+    border: 1px solid #BD10E0; }
 
 .teaser {
   overflow: hidden;
@@ -72,23 +67,40 @@ html {
   width: 50%;
   position: relative;
   margin-bottom: 60px; }
-
-.teaser-item:nth-child(even) {
-  margin-top: 40px; }
+  .teaser-item:nth-child(even) {
+    margin-top: 40px; }
 
 .teaser-item__box {
   position: absolute;
   top: 120px;
   left: 40px; }
-
-.teaser-item__box h3 a {
-  font-size: 36px;
-  text-decoration: none; }
-
-.teaser-item__box p {
-  max-width: 430px;
-  padding: 40px;
-  border: 1px solid #BD10E0; }
+  .teaser-item__box h3 a {
+    font-size: 36px;
+    text-decoration: none;
+    color: inherit; }
+  .teaser-item__box p {
+    max-width: 430px;
+    padding: 40px;
+    border: 1px solid #BD10E0;
+    border-color: inherit; }
+  .teaser-item--the-hunter .teaser-item__box {
+    border-color: #4A90E2;
+    color: #4A90E2; }
+  .teaser-item--the-fisherman .teaser-item__box {
+    border-color: #D0021B;
+    color: #D0021B; }
+  .teaser-item--the-drinker .teaser-item__box {
+    border-color: #7ED321;
+    color: #7ED321; }
+  .teaser-item--the-bullfighter .teaser-item__box {
+    border-color: #BD10E0;
+    color: #BD10E0; }
+  .teaser-item--the-lover .teaser-item__box {
+    border-color: #50E3C2;
+    color: #50E3C2; }
+  .teaser-item--the-papa .teaser-item__box {
+    border-color: #F8E71C;
+    color: #F8E71C; }
 
 .teaser-item__read-more {
   position: absolute;
