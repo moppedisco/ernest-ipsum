@@ -8,3 +8,5 @@ node_modules
 
 # Ignore npm debugs
 npm-debug.log
+
+.sass-cache

@@ -1,17 +1,17 @@
-*,
-*:after,
-*:before {
-  box-sizing: border-box; }
+ *,
+ *:after,
+ *:before { box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dl,
-blockquote, p, address,
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dl,
+blockquote,p,address,
 table,
-fieldset, figure,
-pre, hr {
+fieldset,figure,
+pre,hr {
   margin-top: 0;
   margin-bottom: 18px;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 html {
   background: #F2F2F2;
@@ -19,24 +19,28 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 32px;
-  line-height: 2rem; }
+  line-height: 2rem;
+}
 
 .header {
   background: #F96332;
-  text-align: center; }
+  text-align: center;
+}
 
 .header nav {
-  float: right; }
+  float: right;
+}
 
 .header .logo {
-  display: inline-block; }
+  display: inline-block;
+}
 
-.submenu {
-  display: none; }
+.submenu { display: none; }
 
 .main {
   max-width: 1400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .intro {
   border: 1px solid #F96332;
@@ -45,7 +49,8 @@ html {
   margin: 60px auto 140px;
   padding: 60px 20px 20px;
   position: relative;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .intro:before,
 .intro:after {
@@ -55,40 +60,49 @@ html {
   left: -20px;
   width: 100%;
   height: 100%;
-  border: 1px solid #50E3C2; }
+  border: 1px solid #50E3C2;
+}
 
 .intro:after {
   top: 40px;
   left: -40px;
-  border: 1px solid #BD10E0; }
+  border: 1px solid #BD10E0;
+}
 
 .teaser {
   overflow: hidden;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 .teaser-item {
   float: left;
   width: 50%;
   position: relative;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+}
 
 .teaser-item:nth-child(even) {
-  margin-top: 40px; }
+  margin-top: 40px;
+}
 
 .teaser-item__box {
   position: absolute;
   top: 120px;
-  left: 40px; }
+  left: 40px;
+
+}
 
 .teaser-item__box h3 a {
   font-size: 36px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .teaser-item__box p {
   max-width: 430px;
   padding: 40px;
-  border: 1px solid #BD10E0; }
+  border: 1px solid #BD10E0;
+}
 
 .teaser-item__read-more {
   position: absolute;
@@ -99,11 +113,15 @@ html {
   text-decoration: none;
   border-radius: 15px;
   font-size: 14px;
-  padding: 0 15px; }
+  padding: 0 15px;
+}
 
 .teaser-item img {
   max-width: 100%;
   width: 100%;
-  height: auto; }
+  height: auto;
+}
 
-/*# sourceMappingURL=main.css.map */
+
+
+
