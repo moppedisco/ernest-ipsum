@@ -1,13 +1,60 @@
- $blue: #4A90E2;
- $yellow: #F8E71C;
- $green: #7ED321;
- $purple: #BD10E0;
- $red: #D0021B;
- $turquoise: #50E3C2;
+$blue: #4A90E2;
+$yellow: #F8E71C;
+$green: #7ED321;
+$purple: #BD10E0;
+$red: #D0021B;
+$turquoise: #50E3C2;
 
- *,
- *:after,
- *:before { box-sizing: border-box; }
+$base-font-size:    16;
+$base-line-height:  28;
+
+@mixin font-size($sizeInPx: 16, $line: false) {
+  @if unit($sizeInPx) == "px" {
+    $sizeInPx: $sizeInPx / 1px;
+  }
+  @else if unit($sizeInPx) == "em" {
+    @warn "Not a valid value: #{$value}";
+  }
+  font-size: ($sizeInPx) + px;
+  font-size: ($sizeInPx / 16) + rem;
+
+  @if( $line == true ) {
+    $line: $sizeInPx * 1.66666667;
+  }
+
+  @if( $line != false ) {
+    line-height: ($line) + px;
+    line-height: ($line / 16) + rem;
+  }
+}
+
+@mixin font-light--serif {
+	font-family: "aw-conqueror-didot",serif;
+	font-style: italic;
+	font-weight: 300;
+}
+
+@mixin font-light {
+	font-family: "europa",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+@mixin font-regular {
+	font-family: "europa",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin font-bold {
+	font-family: "europa",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+*,
+*:after,
+*:before { box-sizing: border-box; }
 
 h1,h2,h3,h4,h5,h6,hgroup,
 ul,ol,dl,
@@ -16,22 +63,43 @@ table,
 fieldset,figure,
 pre,hr {
   margin-top: 0;
-  margin-bottom: 18px;
-  margin-bottom: 1rem;
+  margin-bottom:$base-line-height*1px;
+  margin-bottom:($base-line-height/$base-font-size)*1rem;
 }
+
+h1,h2,h3,h4,h5,h6 {
+ @include font-bold;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+}
+
+
 
 html {
   background: #F2F2F2;
   color: #000;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 32px;
-  line-height: 2rem;
+  @include font-size(18px,true);
+  @include font-light;
+}
+
+.button {
+	padding: 4px 20px 5px;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	@include font-size(14px,true);
+	@include font-regular;
+	text-decoration: none;
+
 }
 
 .header {
   background: #F96332;
   text-align: center;
+  padding: 5px;
+
+  .home & {
+  	background: #fff;
+  }
 
   .the-hunter & { background: $blue; }
   .the-fisherman & { background: $red; }
@@ -42,7 +110,26 @@ html {
 
   nav {
     float: right;
+    margin-right: 20px;
+    margin-top: 8px;
+
+    a {
+    	@extend .button;
+    	border-color: #fff;
+    	color: #fff;
+    }
   }
+
+  .home & nav a {
+  	color: #D0021B;
+  	border-color: #D0021B;
+  }
+
+	.menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
   .logo {
     display: inline-block;
@@ -61,8 +148,9 @@ html {
   color: #F96332;
   max-width: 430px;
   margin: 60px auto 140px;
-  padding: 60px 20px 20px;
+  padding: 60px 60px 20px 20px;
   position: relative;
+  @include font-size(18px,true);
   font-style: italic;
 
 	.the-hunter & { color: $blue; }
@@ -88,7 +176,26 @@ html {
     left: -40px;
     border: 1px solid #BD10E0;
   }
+
+	.home & {
+		padding: 80px;
+		margin: 0 0 200px;
+		max-width: none;
+		border: none;
+		background: #D0021B;
+		color: #fff;
+		@include font-light--serif;
+		@include font-size(84px);
+		line-height: 1.2;
+	}
+
+  .home &:before,
+  .home &:after, {
+  	display: none;
+  }
 }
+
+
 
 .teaser {
   overflow: hidden;
@@ -134,15 +241,12 @@ html {
 }
 
 .teaser-item__read-more {
+  @extend .button;
+  background: #fff;
   position: absolute;
   right: 40px;
   bottom: 50px;
-  background: #fff;
   color: inherit;
-  text-decoration: none;
-  border-radius: 15px;
-  font-size: 14px;
-  padding: 0 15px;
 }
 
 .teaser-item img {
@@ -177,6 +281,7 @@ html {
 	p:nth-of-type(1) {
 		font-size: 28px;
 		line-height: 1.5;
+		@include font-light;
 	}
 
 	figure {

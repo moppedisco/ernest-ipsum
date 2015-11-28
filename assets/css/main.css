@@ -10,20 +10,46 @@ table,
 fieldset, figure,
 pre, hr {
   margin-top: 0;
-  margin-bottom: 18px;
-  margin-bottom: 1rem; }
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "europa",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 html {
   background: #F2F2F2;
   color: #000;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 32px;
-  line-height: 2rem; }
+  line-height: 30.0px;
+  line-height: 1.875rem;
+  font-family: "europa",sans-serif;
+  font-style: normal;
+  font-weight: 300; }
+
+.button, .header nav a, .teaser-item__read-more {
+  padding: 4px 20px 5px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 23.33333px;
+  line-height: 1.45833rem;
+  font-family: "europa",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none; }
 
 .header {
   background: #F96332;
-  text-align: center; }
+  text-align: center;
+  padding: 5px; }
+  .home .header {
+    background: #fff; }
   .the-hunter .header {
     background: #4A90E2; }
   .the-fisherman .header {
@@ -37,7 +63,19 @@ html {
   .the-papa .header {
     background: #F8E71C; }
   .header nav {
-    float: right; }
+    float: right;
+    margin-right: 20px;
+    margin-top: 8px; }
+    .header nav a {
+      border-color: #fff;
+      color: #fff; }
+  .home .header nav a {
+    color: #D0021B;
+    border-color: #D0021B; }
+  .header .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
   .header .logo {
     display: inline-block; }
 
@@ -53,8 +91,12 @@ html {
   color: #F96332;
   max-width: 430px;
   margin: 60px auto 140px;
-  padding: 60px 20px 20px;
+  padding: 60px 60px 20px 20px;
   position: relative;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 30.0px;
+  line-height: 1.875rem;
   font-style: italic; }
   .the-hunter .intro {
     color: #4A90E2; }
@@ -80,6 +122,21 @@ html {
     top: 40px;
     left: -40px;
     border: 1px solid #BD10E0; }
+  .home .intro {
+    padding: 80px;
+    margin: 0 0 200px;
+    max-width: none;
+    border: none;
+    background: #D0021B;
+    color: #fff;
+    font-family: "aw-conqueror-didot",serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 84px;
+    font-size: 5.25rem;
+    line-height: 1.2; }
+  .home .intro:before, .home .intro:after {
+    display: none; }
 
 .teaser {
   overflow: hidden;
@@ -127,15 +184,11 @@ html {
     border-color: inherit; }
 
 .teaser-item__read-more {
+  background: #fff;
   position: absolute;
   right: 40px;
   bottom: 50px;
-  background: #fff;
-  color: inherit;
-  text-decoration: none;
-  border-radius: 15px;
-  font-size: 14px;
-  padding: 0 15px; }
+  color: inherit; }
 
 .teaser-item img {
   max-width: 100%;
@@ -166,7 +219,10 @@ html {
       color: #F8E71C; }
   .text p:nth-of-type(1) {
     font-size: 28px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    font-family: "europa",sans-serif;
+    font-style: normal;
+    font-weight: 300; }
   .text figure {
     margin: 0;
     position: absolute;

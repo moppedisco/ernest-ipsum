@@ -11,7 +11,8 @@
 
   <?php echo css('assets/css/normalize.css') ?>
   <?php echo css('assets/css/main.css') ?>
-
+  <script src="https://use.typekit.net/mlu8vmk.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body class="template--<?php echo $page->template() ?> <?php echo $page->uid() ?>">
 <div class="wrapper">
