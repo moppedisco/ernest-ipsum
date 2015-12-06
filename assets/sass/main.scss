@@ -1,9 +1,10 @@
 $blue: #4A90E2;
-$yellow: #F8E71C;
+$yellow: #EFDE08;
 $green: #7ED321;
 $purple: #BD10E0;
-$red: #D0021B;
+$orange: #F96332;
 $turquoise: #50E3C2;
+$red: #F13950;
 
 $base-font-size:    16;
 $base-line-height:  28;
@@ -82,6 +83,11 @@ html {
   @include font-light;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .button {
 	padding: 4px 20px 5px;
 	border: 1px solid transparent;
@@ -93,25 +99,26 @@ html {
 }
 
 .header {
+  overflow: hidden;
   background: #F96332;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
 
   .home & {
   	background: #fff;
   }
 
   .the-hunter & { background: $blue; }
-  .the-fisherman & { background: $red; }
+  .the-fisherman & { background: $orange; }
   .the-drinker & { background: $green; }
   .the-bullfighter & { background: $purple; }
   .the-lover & { background: $turquoise; }
   .the-papa & { background: $yellow; }
 
   nav {
-    float: right;
+    position: absolute;
+    right: 0;
     margin-right: 20px;
-    margin-top: 8px;
 
     a {
     	@extend .button;
@@ -132,15 +139,51 @@ html {
 	}
 
   .logo {
+    @include font-light--serif;
+    @include font-size(24px);
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
     display: inline-block;
+
+    .home & {
+      color: $red;
+    }
   }
 }
 
 .submenu { display: none; }
 
 .main {
-  max-width: 1400px;
-  margin: 0 auto;
+  @extend .container;
+  .home & {
+    max-width: none;
+    margin: 0;
+  }
+
+
+}
+
+.intro--hero {
+  padding: 80px 0;
+  margin: 0 0 200px;
+  border: none;
+  background: $red;
+  color: #fff;
+
+  .intro--hero__inner {
+    @extend .container;
+    padding-right: 33.33333%;
+  }
+
+  p:first-child {
+    @include font-light--serif;
+    @include font-size(84px);
+    line-height: 1.2;
+  }
+
 }
 
 .intro {
@@ -154,7 +197,7 @@ html {
   font-style: italic;
 
 	.the-hunter & { color: $blue; }
-	.the-fisherman & { color: $red; }
+	.the-fisherman & { color: $orange; }
 	.the-drinker & { color: $green; }
 	.the-bullfighter & { color: $purple; }
 	.the-lover & { color: $turquoise; }
@@ -177,25 +220,11 @@ html {
     border: 1px solid #BD10E0;
   }
 
-	.home & {
-		padding: 80px;
-		margin: 0 0 200px;
-		max-width: none;
-		border: none;
-		background: #D0021B;
-		color: #fff;
-		@include font-light--serif;
-		@include font-size(84px);
-		line-height: 1.2;
-	}
-
   .home &:before,
   .home &:after, {
   	display: none;
   }
 }
-
-
 
 .teaser {
   overflow: hidden;
@@ -205,49 +234,65 @@ html {
 
 .teaser-item {
   float: left;
-  width: 50%;
+  width: 60%;
   position: relative;
   margin-bottom: 60px;
+  clear: both;
 
-  &:nth-child(even) {
-    margin-top: 40px;
+  &:nth-child(odd){
+
+  }
+
+  &:nth-child(even){
+    float: right;
   }
 
   &.teaser-item--the-hunter { border-color: $blue; color: $blue; }
-  &.teaser-item--the-fisherman { border-color: $red; color: $red; }
+  &.teaser-item--the-fisherman { border-color: $orange; color: $orange; }
   &.teaser-item--the-drinker { border-color: $green; color: $green; }
   &.teaser-item--the-bullfighter { border-color: $purple; color: $purple; }
   &.teaser-item--the-lover { border-color: $turquoise; color: $turquoise; }
   &.teaser-item--the-papa { border-color: $yellow; color: $yellow; }
+
+  hr {
+    box-shadow: none;
+    border: 40px solid #000;
+    border-color: inherit;
+  }
+
 }
 
-.teaser-item__box {
-  position: absolute;
-  top: 120px;
-  left: 40px;
+.teaser-item__title {
 
-  h3 a {
+  .teaser-item:nth-child(odd) & { margin-left: 20%; }
+  .teaser-item:nth-child(even) & { margin-left: 20%; }
+
+
+
+  a {
+    display: block;
     font-size: 36px;
     text-decoration: none;
     color: inherit;
   }
+}
 
-  p {
-    max-width: 430px;
-    padding: 40px;
-    border: 1px solid #BD10E0;
-    border-color: inherit;
+.teaser-item__box {
+  max-width: 430px;
+
+  .teaser-item:nth-child(odd) & { margin-left: 20%; }
+  .teaser-item:nth-child(even) & { margin-left: 20%; }
+
+  .teaser-item__read-more {
+    @extend .button;
+    background: #fff;
+    color: inherit;
+    float: right;
   }
+
+
 }
 
-.teaser-item__read-more {
-  @extend .button;
-  background: #fff;
-  position: absolute;
-  right: 40px;
-  bottom: 50px;
-  color: inherit;
-}
 
 .teaser-item img {
   max-width: 100%;
@@ -271,7 +316,7 @@ html {
 	h1 {
 		text-align: center;
 		.the-hunter & { color: $blue; }
-		.the-fisherman & { color: $red; }
+		.the-fisherman & { color: $orange; }
 		.the-drinker & { color: $green; }
 		.the-bullfighter & { color: $purple; }
 		.the-lover & { color: $turquoise; }
@@ -320,5 +365,14 @@ html {
 }
 
 .footer {
+  @include font-size(12px);
+  color: #aaa;
 	text-align: center;
+
+  strong {
+    color: $red;
+    @include font-size(22px);
+    line-height: 100%;
+    vertical-align: middle;
+  }
 }

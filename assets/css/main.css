@@ -31,7 +31,11 @@ html {
   font-style: normal;
   font-weight: 300; }
 
-.button, .header nav a, .teaser-item__read-more {
+.container, .main, .intro--hero .intro--hero__inner {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+.button, .header nav a, .teaser-item__box .teaser-item__read-more {
   padding: 4px 20px 5px;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -45,15 +49,16 @@ html {
   text-decoration: none; }
 
 .header {
+  overflow: hidden;
   background: #F96332;
   text-align: center;
-  padding: 5px; }
+  padding: 10px; }
   .home .header {
     background: #fff; }
   .the-hunter .header {
     background: #4A90E2; }
   .the-fisherman .header {
-    background: #D0021B; }
+    background: #F96332; }
   .the-drinker .header {
     background: #7ED321; }
   .the-bullfighter .header {
@@ -61,11 +66,11 @@ html {
   .the-lover .header {
     background: #50E3C2; }
   .the-papa .header {
-    background: #F8E71C; }
+    background: #EFDE08; }
   .header nav {
-    float: right;
-    margin-right: 20px;
-    margin-top: 8px; }
+    position: absolute;
+    right: 0;
+    margin-right: 20px; }
     .header nav a {
       border-color: #fff;
       color: #fff; }
@@ -77,14 +82,42 @@ html {
     padding: 0;
     margin: 0; }
   .header .logo {
+    font-family: "aw-conqueror-didot",serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
     display: inline-block; }
+    .home .header .logo {
+      color: #F13950; }
 
 .submenu {
   display: none; }
 
-.main {
-  max-width: 1400px;
-  margin: 0 auto; }
+.home .main {
+  max-width: none;
+  margin: 0; }
+
+.intro--hero {
+  padding: 80px 0;
+  margin: 0 0 200px;
+  border: none;
+  background: #F13950;
+  color: #fff; }
+  .intro--hero .intro--hero__inner {
+    padding-right: 33.33333%; }
+  .intro--hero p:first-child {
+    font-family: "aw-conqueror-didot",serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 84px;
+    font-size: 5.25rem;
+    line-height: 1.2; }
 
 .intro {
   border: 1px solid #F96332;
@@ -101,7 +134,7 @@ html {
   .the-hunter .intro {
     color: #4A90E2; }
   .the-fisherman .intro {
-    color: #D0021B; }
+    color: #F96332; }
   .the-drinker .intro {
     color: #7ED321; }
   .the-bullfighter .intro {
@@ -109,7 +142,7 @@ html {
   .the-lover .intro {
     color: #50E3C2; }
   .the-papa .intro {
-    color: #F8E71C; }
+    color: #EFDE08; }
   .intro:before, .intro:after {
     content: "";
     position: absolute;
@@ -122,19 +155,6 @@ html {
     top: 40px;
     left: -40px;
     border: 1px solid #BD10E0; }
-  .home .intro {
-    padding: 80px;
-    margin: 0 0 200px;
-    max-width: none;
-    border: none;
-    background: #D0021B;
-    color: #fff;
-    font-family: "aw-conqueror-didot",serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 84px;
-    font-size: 5.25rem;
-    line-height: 1.2; }
   .home .intro:before, .home .intro:after {
     display: none; }
 
@@ -145,17 +165,18 @@ html {
 
 .teaser-item {
   float: left;
-  width: 50%;
+  width: 60%;
   position: relative;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  clear: both; }
   .teaser-item:nth-child(even) {
-    margin-top: 40px; }
+    float: right; }
   .teaser-item.teaser-item--the-hunter {
     border-color: #4A90E2;
     color: #4A90E2; }
   .teaser-item.teaser-item--the-fisherman {
-    border-color: #D0021B;
-    color: #D0021B; }
+    border-color: #F96332;
+    color: #F96332; }
   .teaser-item.teaser-item--the-drinker {
     border-color: #7ED321;
     color: #7ED321; }
@@ -166,29 +187,33 @@ html {
     border-color: #50E3C2;
     color: #50E3C2; }
   .teaser-item.teaser-item--the-papa {
-    border-color: #F8E71C;
-    color: #F8E71C; }
-
-.teaser-item__box {
-  position: absolute;
-  top: 120px;
-  left: 40px; }
-  .teaser-item__box h3 a {
-    font-size: 36px;
-    text-decoration: none;
-    color: inherit; }
-  .teaser-item__box p {
-    max-width: 430px;
-    padding: 40px;
-    border: 1px solid #BD10E0;
+    border-color: #EFDE08;
+    color: #EFDE08; }
+  .teaser-item hr {
+    box-shadow: none;
+    border: 40px solid #000;
     border-color: inherit; }
 
-.teaser-item__read-more {
-  background: #fff;
-  position: absolute;
-  right: 40px;
-  bottom: 50px;
+.teaser-item:nth-child(odd) .teaser-item__title {
+  margin-left: 20%; }
+.teaser-item:nth-child(even) .teaser-item__title {
+  margin-left: 20%; }
+.teaser-item__title a {
+  display: block;
+  font-size: 36px;
+  text-decoration: none;
   color: inherit; }
+
+.teaser-item__box {
+  max-width: 430px; }
+  .teaser-item:nth-child(odd) .teaser-item__box {
+    margin-left: 20%; }
+  .teaser-item:nth-child(even) .teaser-item__box {
+    margin-left: 20%; }
+  .teaser-item__box .teaser-item__read-more {
+    background: #fff;
+    color: inherit;
+    float: right; }
 
 .teaser-item img {
   max-width: 100%;
@@ -208,7 +233,7 @@ html {
     .the-hunter .text h1 {
       color: #4A90E2; }
     .the-fisherman .text h1 {
-      color: #D0021B; }
+      color: #F96332; }
     .the-drinker .text h1 {
       color: #7ED321; }
     .the-bullfighter .text h1 {
@@ -216,7 +241,7 @@ html {
     .the-lover .text h1 {
       color: #50E3C2; }
     .the-papa .text h1 {
-      color: #F8E71C; }
+      color: #EFDE08; }
   .text p:nth-of-type(1) {
     font-size: 28px;
     line-height: 1.5;
@@ -252,6 +277,15 @@ html {
   right: 40px; }
 
 .footer {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #aaa;
   text-align: center; }
+  .footer strong {
+    color: #F13950;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 100%;
+    vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */

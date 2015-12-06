@@ -19,6 +19,7 @@
   <header class="header" role="banner">
     <?php snippet('menu') ?>
     <a class="logo" href="<?php echo url() ?>">
-      <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
+    <?php echo $site->title()->html() ?>
+      <!-- <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" /> -->
     </a>
   </header>

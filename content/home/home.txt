@@ -4,7 +4,6 @@ Title: Home
 
 Text: 
 
-“There is nothing to writing. 
-All you have to do is sit 
-at the typewriter
-and bleed.”
+“There is nothing to writing. All you have to do is sit at the typewriter and bleed.”
+
+— Ernest Hemingway

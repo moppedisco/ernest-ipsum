@@ -1,4 +1,4 @@
-Title: Ernest Hemingway Ipsum
+Title: Ernest Ipsum
 
 ----
 
@@ -10,8 +10,8 @@ Description: A clean, well-lighted place.
 
 ----
 
-Keywords: Ernest Hemingway ipsum,Ernest Hemingway, lorem ipsum
+Keywords: Ernest Hemingway ipsum,Ernest Hemingway,lorem ipsum
 
 ----
 
-Copyright: Made with by Michael Walsh Kirwan and Yacine Belarbi
+Copyright: Made with **♥** by Michael Walsh Kirwan and Yacine Belarbi
