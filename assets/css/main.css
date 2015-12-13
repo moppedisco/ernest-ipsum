@@ -31,6 +31,10 @@ html {
   font-style: normal;
   font-weight: 300;
   position: relative; }
+  @media (max-width: 800px) {
+    html {
+      font-size: 87.5%;
+      line-height: 1.5; } }
 
 .wrapper {
   overflow: hidden;
@@ -76,9 +80,15 @@ html {
   .the-papa .header {
     background: #EFDE08; }
   .header nav {
-    position: absolute;
-    right: 0;
-    margin-right: 20px; }
+    float: right;
+    margin-top: 5px; }
+    @media (min-width: 800px) {
+      .header nav {
+        margin-top: 0px;
+        float: none;
+        position: absolute;
+        right: 0;
+        margin-right: 20px; } }
     .header nav a {
       border-color: #fff;
       color: #fff; }
@@ -100,7 +110,11 @@ html {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    display: inline-block; }
+    float: left; }
+    @media (min-width: 800px) {
+      .header .logo {
+        float: none;
+        display: inline-block; } }
     .home .header .logo {
       color: #F13950; }
 
@@ -290,6 +304,7 @@ html {
       color: #EFDE08; }
   .text .paragraphs p:nth-of-type(1) {
     font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.5;
     font-family: "europa",sans-serif;
     font-style: normal;
