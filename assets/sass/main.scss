@@ -81,6 +81,12 @@ html {
   color: #000;
   @include font-size(18px,true);
   @include font-light;
+  position: relative;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -174,8 +180,10 @@ html {
   color: #fff;
 
   .intro--hero__inner {
-    @extend .container;
-    padding-right: 33.33333%;
+    margin-left: 10%;
+    margin-right: 10%;
+    // @extend .container;
+    // padding-right: 33.33333%;
   }
 
   p:first-child {
@@ -234,7 +242,7 @@ html {
 
 .teaser-item {
   float: left;
-  width: 60%;
+  width: 100%;
   position: relative;
   margin-bottom: 60px;
   clear: both;
@@ -254,20 +262,25 @@ html {
   &.teaser-item--the-lover { border-color: $turquoise; color: $turquoise; }
   &.teaser-item--the-papa { border-color: $yellow; color: $yellow; }
 
+  &:nth-child(odd) .teaser-item__title { margin-left: 10%; }
+  &:nth-child(even) .teaser-item__title { margin-left: 50%; }
+
   hr {
     box-shadow: none;
     border: 40px solid #000;
     border-color: inherit;
   }
 
+  &:nth-child(odd) hr { margin-right: 30%; }
+  &:nth-child(even) hr { margin-left: 30%; }
+
+  &:nth-child(1) hr { margin-right: 50%; }
+  &:nth-child(3) hr { margin-right: 60%; }
+  &:nth-child(4) hr { margin-left: 20%; }
+
 }
 
 .teaser-item__title {
-
-  .teaser-item:nth-child(odd) & { margin-left: 20%; }
-  .teaser-item:nth-child(even) & { margin-left: 20%; }
-
-
 
   a {
     display: block;
@@ -280,8 +293,8 @@ html {
 .teaser-item__box {
   max-width: 430px;
 
-  .teaser-item:nth-child(odd) & { margin-left: 20%; }
-  .teaser-item:nth-child(even) & { margin-left: 20%; }
+  .teaser-item:nth-child(odd) & { margin-left: 10%; }
+  .teaser-item:nth-child(even) & { margin-left: 50%; }
 
   .teaser-item__read-more {
     @extend .button;
@@ -375,4 +388,27 @@ html {
     line-height: 100%;
     vertical-align: middle;
   }
+}
+
+[class^="image-shape"] {
+  position: absolute;
+  width: 50%;
+}
+
+[class$="--circle"] {
+  top: 10%;
+  right: -30%;
+  width: 60%;
+}
+
+[class$="--triangle"] {
+  top: 40%;
+  left: -20%;
+  width: 75%;
+}
+
+[class$="--rectangle"] {
+  width: 24%;
+  bottom: 0%;
+  right: 0%;
 }
