@@ -458,6 +458,10 @@ html {
   position: absolute;
   width: 50%;
   z-index: -1;
+
+  .template--ernest & {
+    display: none;
+  }
 }
 
 [class$="--circle"] {

@@ -375,6 +375,8 @@ html {
   position: absolute;
   width: 50%;
   z-index: -1; }
+  .template--ernest [class^="image-shape"] {
+    display: none; }
 
 [class$="--circle"] {
   top: 10%;

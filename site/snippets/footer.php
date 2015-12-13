@@ -6,13 +6,13 @@
 
   </footer>
   <svg class="image-shape--circle" viewBox="0 0 1185 1179">
-     <use xlink:href="./assets/images/circle.svg#Page-1"></use>
+     <use xlink:href="<?php echo url('/assets/images/circle.svg#Page-1'); ?>"></use>
   </svg>
   <svg class="image-shape--rectangle" viewBox="0 0 373 914">
-     <use xlink:href="./assets/images/rectangle.svg#Page-1"></use>
+     <use xlink:href="<?php echo url('/assets/images/rectangle.svg#Page-1'); ?>"></use>
   </svg>
   <svg class="image-shape--triangle" viewBox="0 0 1175 932">
-     <use xlink:href="./assets/images/triangle.svg#Page-1"></use>
+     <use xlink:href="<?php echo url('/assets/images/triangle.svg#Page-1'); ?>"></use>
   </svg>
 </div>
 
