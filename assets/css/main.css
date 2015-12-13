@@ -206,7 +206,11 @@ html {
   width: 100%;
   position: relative;
   margin-bottom: 60px;
-  clear: both; }
+  clear: both;
+  text-align: center; }
+  @media (min-width: 800px) {
+    .teaser-item {
+      text-align: left; } }
   .teaser-item:nth-child(even) {
     float: right; }
   .teaser-item.teaser-item--the-hunter {
@@ -229,19 +233,21 @@ html {
     color: #EFDE08; }
   .teaser-item hr {
     box-shadow: none;
-    border: 40px solid #000;
+    border: 20px solid #000;
     border-color: inherit; }
-  @media (min-width: 800px) {
-    .teaser-item:nth-child(odd) hr {
-      margin-right: 30%; }
-    .teaser-item:nth-child(even) hr {
-      margin-left: 30%; }
-    .teaser-item:nth-child(1) hr {
-      margin-right: 50%; }
-    .teaser-item:nth-child(3) hr {
-      margin-right: 60%; }
-    .teaser-item:nth-child(4) hr {
-      margin-left: 20%; } }
+    @media (min-width: 800px) {
+      .teaser-item hr {
+        border-width: 40px; } }
+  .teaser-item:nth-child(odd) hr {
+    margin-right: 30%; }
+  .teaser-item:nth-child(even) hr {
+    margin-left: 30%; }
+  .teaser-item:nth-child(1) hr {
+    margin-right: 50%; }
+  .teaser-item:nth-child(3) hr {
+    margin-right: 60%; }
+  .teaser-item:nth-child(4) hr {
+    margin-left: 20%; }
 
 .teaser-item__title {
   padding: 0 30px; }
@@ -270,8 +276,10 @@ html {
         margin-left: 50%; } }
   .teaser-item__box .teaser-item__read-more {
     background: #fff;
-    color: inherit;
-    float: right; }
+    color: inherit; }
+    @media (min-width: 800px) {
+      .teaser-item__box .teaser-item__read-more {
+        float: right; } }
     .teaser-item__box .teaser-item__read-more:hover {
       border-color: inherit; }
 

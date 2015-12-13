@@ -285,6 +285,11 @@ html {
   position: relative;
   margin-bottom: 60px;
   clear: both;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    text-align: left;
+  }
 
   &:nth-child(even){
     float: right;
@@ -299,18 +304,20 @@ html {
 
   hr {
     box-shadow: none;
-    border: 40px solid #000;
+    border: 20px solid #000;
     border-color: inherit;
+
+    @media (min-width: 800px) {
+      border-width: 40px;
+    }
   }
 
-  @media (min-width: 800px) {
-    &:nth-child(odd) hr { margin-right: 30%; }
-    &:nth-child(even) hr { margin-left: 30%; }
+  &:nth-child(odd) hr { margin-right: 30%; }
+  &:nth-child(even) hr { margin-left: 30%; }
 
-    &:nth-child(1) hr { margin-right: 50%; }
-    &:nth-child(3) hr { margin-right: 60%; }
-    &:nth-child(4) hr { margin-left: 20%; }
-  }
+  &:nth-child(1) hr { margin-right: 50%; }
+  &:nth-child(3) hr { margin-right: 60%; }
+  &:nth-child(4) hr { margin-left: 20%; }
 }
 
 .teaser-item__title {
@@ -345,7 +352,10 @@ html {
     @extend .button;
     background: #fff;
     color: inherit;
-    float: right;
+
+    @media (min-width: 800px) {
+      float: right;
+    }
 
     &:hover {
       border-color: inherit;
