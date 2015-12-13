@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 
   var randomSVG = Math.floor(Math.random() * 3);
-  console.log(randomSVG);
 
   if($("body").hasClass("template--ernest")){
     $("[class^='image-shape']:eq( "+randomSVG+" )").show();

@@ -9,6 +9,11 @@ $red: #F13950;
 $base-font-size:    16;
 $base-line-height:  28;
 
+$tablet-up: 768px;
+$desktop-up: 935px;
+$almost-wide: 1070px;
+$wide: 1180px;
+
 @mixin font-size($sizeInPx: 16, $line: false) {
   @if unit($sizeInPx) == "px" {
     $sizeInPx: $sizeInPx / 1px;
@@ -95,13 +100,17 @@ html {
 }
 
 .button {
-	padding: 4px 20px 5px;
+	padding: 7px 25px;
 	border: 1px solid transparent;
-	border-radius: 20px;
+	border-radius: 100px;
 	@include font-size(14px,true);
 	@include font-regular;
 	text-decoration: none;
+  transition: all 0.3s;
 
+  &:hover {
+    background: none;
+  }
 }
 
 .header {
@@ -164,12 +173,17 @@ html {
 
 .main {
   @extend .container;
+  padding: 0 30px;
+
   .home & {
     max-width: none;
     margin: 0;
+    padding: 0;
   }
 
+  @media (min-width: 800px) {
 
+  }
 }
 
 .intro--hero {
@@ -180,16 +194,22 @@ html {
   color: #fff;
 
   .intro--hero__inner {
-    margin-left: 10%;
-    margin-right: 10%;
-    // @extend .container;
-    // padding-right: 33.33333%;
+    margin: 0 30px;
+    @media (min-width: 800px) {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
   }
 
   p:first-child {
     @include font-light--serif;
-    @include font-size(84px);
+    @include font-size(44px);
     line-height: 1.2;
+
+    @media (min-width: 800px) {
+      @include font-size(84px);
+      line-height: 1.2;
+    }
   }
 
 }
@@ -197,12 +217,18 @@ html {
 .intro {
   border: 1px solid #F96332;
   color: #F96332;
-  max-width: 430px;
-  margin: 60px auto 140px;
-  padding: 60px;
   position: relative;
   @include font-size(18px,true);
   font-style: italic;
+
+  margin: 60px 0;
+  padding: 40px;
+
+  @media (min-width: 800px) {
+    max-width: 430px;
+    margin: 60px auto 140px;
+    padding: 60px;
+  }
 
 	.the-hunter & { color: $blue; }
 	.the-fisherman & { color: $orange; }
@@ -247,10 +273,6 @@ html {
   margin-bottom: 60px;
   clear: both;
 
-  &:nth-child(odd){
-
-  }
-
   &:nth-child(even){
     float: right;
   }
@@ -262,25 +284,31 @@ html {
   &.teaser-item--the-lover { border-color: $turquoise; color: $turquoise; }
   &.teaser-item--the-papa { border-color: $yellow; color: $yellow; }
 
-  &:nth-child(odd) .teaser-item__title { margin-left: 10%; }
-  &:nth-child(even) .teaser-item__title { margin-left: 50%; }
-
   hr {
     box-shadow: none;
     border: 40px solid #000;
     border-color: inherit;
   }
 
-  &:nth-child(odd) hr { margin-right: 30%; }
-  &:nth-child(even) hr { margin-left: 30%; }
+  @media (min-width: 800px) {
+    &:nth-child(odd) hr { margin-right: 30%; }
+    &:nth-child(even) hr { margin-left: 30%; }
 
-  &:nth-child(1) hr { margin-right: 50%; }
-  &:nth-child(3) hr { margin-right: 60%; }
-  &:nth-child(4) hr { margin-left: 20%; }
-
+    &:nth-child(1) hr { margin-right: 50%; }
+    &:nth-child(3) hr { margin-right: 60%; }
+    &:nth-child(4) hr { margin-left: 20%; }
+  }
 }
 
 .teaser-item__title {
+
+  padding: 0 30px;
+
+  @media (min-width: 800px) {
+    padding: 0;
+    .teaser-item:nth-child(odd) & { margin-left: 10%; }
+    .teaser-item:nth-child(even) & { margin-left: 50%; }
+  }
 
   a {
     display: block;
@@ -291,16 +319,24 @@ html {
 }
 
 .teaser-item__box {
-  max-width: 430px;
+  padding: 0 30px;
 
-  .teaser-item:nth-child(odd) & { margin-left: 10%; }
-  .teaser-item:nth-child(even) & { margin-left: 50%; }
+  @media (min-width: 800px) {
+    paddgin: 0;
+    max-width: 430px;
+    .teaser-item:nth-child(odd) & { margin-left: 10%; }
+    .teaser-item:nth-child(even) & { margin-left: 50%; }
+  }
 
   .teaser-item__read-more {
     @extend .button;
     background: #fff;
     color: inherit;
     float: right;
+
+    &:hover {
+      border-color: inherit;
+    }
   }
 
 
@@ -323,8 +359,8 @@ html {
 
 .text {
 	position: relative;
-	padding-top: 350px;
-	margin-bottom: 80px;
+  padding-top: 350px;
+  margin-bottom: 80px;
 
 	h1 {
 		text-align: center;
@@ -336,11 +372,13 @@ html {
 		.the-papa & { color: $yellow; }
 	}
 
-	.paragraphs p:nth-of-type(1) {
-		font-size: 28px;
-		line-height: 1.5;
-		@include font-light;
-	}
+	.paragraphs {
+    p:nth-of-type(1) {
+      font-size: 28px;
+      line-height: 1.5;
+      @include font-light;
+    }
+  }
 
 	figure {
 		margin: 0;
@@ -392,7 +430,12 @@ html {
 }
 
 .paragraph-selector {
-  margin: 0 0 140px;
+  margin: 0 0 40px;
+
+  @media (min-width: 800px) {
+    margin: 0 0 140px;
+  }
+
   text-align: center;
   @include font-size(12px);
 
@@ -406,6 +449,7 @@ html {
     list-style: none;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
   }
 
   li {
@@ -416,11 +460,15 @@ html {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    margin: 0 15px;
+    margin: 0 8px;
     border-radius: 100%;
     border: 1px solid #000;
     cursor: pointer;
     font-weight: 500;
+
+    @media (min-width: 800px) {
+      margin: 0 15px;
+    }
 
     .the-hunter & { border-color: $blue; color: $blue; }
     .the-fisherman & { border-color: $orange; color: $orange; }
