@@ -202,17 +202,20 @@ html {
   padding: 0; }
 
 .teaser-item {
-  float: left;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin-bottom: 60px;
   clear: both;
   text-align: center; }
   @media (min-width: 800px) {
     .teaser-item {
-      text-align: left; } }
-  .teaser-item:nth-child(even) {
-    float: right; }
+      display: block;
+      text-align: left;
+      float: left;
+      width: 100%; }
+      .teaser-item:nth-child(even) {
+        float: right; } }
   .teaser-item.teaser-item--the-hunter {
     border-color: #4A90E2;
     color: #4A90E2; }
@@ -232,6 +235,7 @@ html {
     border-color: #EFDE08;
     color: #EFDE08; }
   .teaser-item hr {
+    order: 1;
     box-shadow: none;
     border: 20px solid #000;
     border-color: inherit; }
@@ -239,9 +243,11 @@ html {
       .teaser-item hr {
         border-width: 40px; } }
   .teaser-item:nth-child(odd) hr {
-    margin-right: 30%; }
+    margin-right: 30%;
+    margin-left: 0; }
   .teaser-item:nth-child(even) hr {
-    margin-left: 30%; }
+    margin-left: 30%;
+    margin-right: 0; }
   .teaser-item:nth-child(1) hr {
     margin-right: 50%; }
   .teaser-item:nth-child(3) hr {
@@ -250,6 +256,7 @@ html {
     margin-left: 20%; }
 
 .teaser-item__title {
+  order: 2;
   padding: 0 30px; }
   @media (min-width: 800px) {
     .teaser-item__title {
@@ -265,6 +272,7 @@ html {
     color: inherit; }
 
 .teaser-item__box {
+  order: 3;
   padding: 0 30px; }
   @media (min-width: 800px) {
     .teaser-item__box {
