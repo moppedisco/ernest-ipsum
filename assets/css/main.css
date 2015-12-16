@@ -311,6 +311,14 @@ html {
     margin: 0 0 5px; }
     .ernest .text figure img {
       width: 100%; }
+  .ernest .text p:nth-of-type(1) {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "europa",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    clear: right; }
   @media (min-width: 800px) {
     .ernest .text h1 {
       margin-right: 30%;
@@ -335,14 +343,6 @@ html {
       margin-top: 120px;
       margin-right: 60px;
       clear: left; }
-    .ernest .text p:nth-of-type(1) {
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 1.5;
-      font-family: "europa",sans-serif;
-      font-style: normal;
-      font-weight: 300;
-      clear: right; }
     .ernest .text p {
       margin-right: 10%; } }
 
