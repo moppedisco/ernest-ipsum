@@ -130,10 +130,13 @@ html {
 
 .intro--hero {
   padding: 80px 0;
-  margin: 0 0 200px;
+  margin: 0 0 80px;
   border: none;
   background: #F13950;
   color: #fff; }
+  @media (min-width: 800px) {
+    .intro--hero {
+      margin: 0 0 200px; } }
   .intro--hero .intro--hero__inner {
     margin: 0 30px; }
     @media (min-width: 800px) {
@@ -296,42 +299,89 @@ html {
   width: 100%;
   height: auto; }
 
+.ernest .main {
+  padding-top: 80px; }
+
+.ernest .text {
+  overflow: hidden;
+  position: relative;
+  z-index: 2; }
+  .ernest .text figure {
+    width: 100%;
+    margin: 0 0 5px; }
+    .ernest .text figure img {
+      width: 100%; }
+  @media (min-width: 800px) {
+    .ernest .text h1 {
+      margin-right: 30%;
+      margin-left: 80px;
+      line-height: 1.5; }
+    .ernest .text figure {
+      margin: 0 0 40px;
+      float: left;
+      max-width: 50%; }
+      .ernest .text figure img {
+        width: 100%;
+        height: auto; }
+    .ernest .text figure:nth-of-type(1) {
+      transform: translateX(40px);
+      position: relative;
+      z-index: 1; }
+    .ernest .text figure:nth-of-type(2) {
+      float: right;
+      transform: translateX(-10%) translateY(40px);
+      margin-bottom: 140px; }
+    .ernest .text figure:nth-of-type(3) {
+      margin-top: 120px;
+      margin-right: 60px;
+      clear: left; }
+    .ernest .text p:nth-of-type(1) {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-family: "europa",sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      clear: right; }
+    .ernest .text p {
+      margin-right: 10%; } }
+
 .template--ernest .main {
   max-width: 460px;
   margin: 0 auto; }
 
-.text {
+.template--ernest .text {
   position: relative;
   padding-top: 350px;
   margin-bottom: 80px; }
-  .text h1 {
+  .template--ernest .text h1 {
     text-align: center; }
-    .the-hunter .text h1 {
+    .the-hunter .template--ernest .text h1 {
       color: #4A90E2; }
-    .the-fisherman .text h1 {
+    .the-fisherman .template--ernest .text h1 {
       color: #F96332; }
-    .the-drinker .text h1 {
+    .the-drinker .template--ernest .text h1 {
       color: #7ED321; }
-    .the-bullfighter .text h1 {
+    .the-bullfighter .template--ernest .text h1 {
       color: #BD10E0; }
-    .the-lover .text h1 {
+    .the-lover .template--ernest .text h1 {
       color: #50E3C2; }
-    .the-papa .text h1 {
+    .the-papa .template--ernest .text h1 {
       color: #EFDE08; }
-  .text .paragraphs p:nth-of-type(1) {
+  .template--ernest .text .paragraphs p:nth-of-type(1) {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.5;
     font-family: "europa",sans-serif;
     font-style: normal;
     font-weight: 300; }
-  .text figure {
+  .template--ernest .text figure {
     margin: 0;
     position: absolute;
     top: 100px;
     left: 50%;
     transform: translateX(-50%); }
-    .text figure img {
+    .template--ernest .text figure img {
       width: 200px;
       height: 200px;
       border-radius: 100%; }

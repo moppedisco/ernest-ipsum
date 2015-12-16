@@ -201,10 +201,15 @@ html {
 
 .intro--hero {
   padding: 80px 0;
-  margin: 0 0 200px;
+  margin: 0 0 80px;
   border: none;
   background: $red;
   color: #fff;
+
+
+  @media (min-width: 800px) {
+    margin: 0 0 200px;
+  }
 
   .intro--hero__inner {
     margin: 0 30px;
@@ -377,15 +382,84 @@ html {
   height: auto;
 }
 
-.template--ernest {
-	.main {
-		max-width: 460px;
-		margin: 0 auto;
-	}
-
+.ernest {
+  .main {
+    padding-top: 80px;
+  }
 }
 
-.text {
+.ernest .text {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+
+  figure {
+    width: 100%;
+    margin: 0 0 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 800px) {
+    h1 {
+      margin-right: 30%;
+      margin-left: 80px;
+      line-height: 1.5;
+    }
+
+    figure {
+      margin: 0 0 40px;
+      // margin-left: -480px;
+      float: left;
+      max-width: 50%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    figure:nth-of-type(1){
+      transform: translateX(40px);
+      position: relative;
+      z-index: 1;
+    }
+
+    figure:nth-of-type(2){
+      float: right;
+      transform: translateX(-10%) translateY(40px);
+      margin-bottom: 140px;
+    }
+
+    figure:nth-of-type(3){
+      margin-top: 120px;
+      margin-right: 60px;
+      clear: left;
+    }
+
+    p:nth-of-type(1){
+      @include font-size(24px);
+      line-height: 1.5;
+      @include font-light;
+      clear: right;
+    }
+
+    p {
+      margin-right: 10%;
+    }
+  }
+}
+
+.template--ernest {
+  .main {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+}
+
+.template--ernest .text {
 	position: relative;
   padding-top: 350px;
   margin-bottom: 80px;

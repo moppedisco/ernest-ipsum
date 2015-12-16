@@ -2,4 +2,20 @@ Title: Ernest
 
 ----
 
-Text: sadfsdf
+Text: 
+
+#Ernest Hemingway is the Great American Writer.
+
+(image: ernest1.png)
+(image: ernest2.png)
+(image: ernest3.png)
+
+Hemingway’s writing is clear, and without ornamentation. Perfect for web copy.
+
+Designers use lorem ipsum placeholder copy each and every day – as if the block of text they are designing around had no meaning. As if those weren’t words. Ernest Ipsum’s aims are twofold; to give designers access to copy that has meaning, beauty and heart – and to introduce them to a writer who’s work is normally relegated to the high school classroom.
+
+Web copy esspecially should be direct, sparse and meaningful – both in, and inbetween, the lines. Ernest Hemingway would have been a damn good copywriter. His writing is as much about what is said as what isn’t. He is, and always will be, the Great American Writer. 
+
+Our hope is that Ernest Ipsum will add some placeholder text – and much-needed gravitas – to your next design project. At least until your copywriter gets briefed on the project – which you probably should have done already, by the way. 
+
+But our greatest hope is that the pixel-obsessed out there put down the Wacom pen and the iPhone 6 Plus and pick up a book. One written by Ernest Fucking Hemingway.
