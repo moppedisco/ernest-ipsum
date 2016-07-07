@@ -17,6 +17,8 @@
 </div>
 
 <?php echo js('assets/js/vendor/jquery-1.11.3.min.js') ?>
+<?php echo js('assets/js/vendor/jquery.pjax.js') ?>
+<?php echo js('assets/js/vendor/nprogress.js') ?>
 <?php echo js('assets/js/main.js') ?>
 </body>
 </html>

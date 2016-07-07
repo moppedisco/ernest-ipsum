@@ -4,7 +4,7 @@
   <a class="link--prev" href="<?php echo $prev->url() ?>">&larr;</a>
   <?php endif ?>
 
-  <main class="main" role="main">
+  <main class="main" role="main" id="pjax-container">
 
     <div class="text">
       <h1><?php echo $page->title()->html() ?></h1>
